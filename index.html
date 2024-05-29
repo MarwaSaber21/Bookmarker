@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON-->
+    <link rel="icon" href="./images/desktop.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <!---font family-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!----wow js-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!----data table-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+    <title>Bookmark</title>
+</head>
+
+<body>
+    <section>
+        <div class=" bookmark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12  pt-5">
+                        <div class="title justify-content-center d-flex pb-5">
+                            <h1 class="animate__animated animate__flipInX">
+                                Bookmarker
+                            </h1>
+                        </div>
+                        <div class="book_cont mt-4 d-flex justify-content-center">
+                            <h2 class="book_cont animate__animated animate__zoomIn ">
+                                <i class="fa-solid fa-bookmark"></i>
+                                Bookmark your favorite sites
+                                <i class="fa-solid fa-bookmark"></i>
+                            </h2>
+
+                        </div>
+                        <i class="arrow mb-3 fs-2 fa-solid fa-circle-down" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+
+                        </i>
+                        <div class="collapse" id="collapseExample">
+                            <div class=" mb-3 sitename">
+                                <label for="urlName" class="mb-2 fw-bold">
+                                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                                    Site Name
+                                </label>
+                                <input oninput="validationName()" type="text" class="form-control mb-4" id="urlName"
+                                    placeholder="Bookmark Name">
+
+                            </div>
+                            <div class="urlname">
+                                <label for="url" class="mb-2 fw-bold">
+                                    <i class="fa-solid fa-link pe-2"></i>
+                                    Site URL
+                                </label>
+                                <input oninput="validationURL()" type="url" class="form-control" id="url"
+                                    placeholder="Website URL">
+
+                            </div>
+                            <div class="my-btn d-flex justify-content-center">
+                                <button onclick="addURL()" class="btn sub my-4 px-5" id="submitBtn">
+                                    Submit
+                                </button>
+                                <button onclick="updateURL()" class="btn sub my-4 px-5 d-none" id="updateBtn">
+                                    Update
+                                </button>
+
+
+                            </div>
+                        </div>
+                        <div class="form-floating mt-5 w-25 mx-auto rounded-5 myform">
+                            <input oninput="searchName()" type="search" class="form-control" id="floatingInput"
+                                placeholder="Search">
+                            <label for="floatingInput">Search By Website Name...</label>
+                        </div>
+                        <table id="mytable" class="table mt-4 text-center bg-light">
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>Website Name</th>
+                                    <th>Visit</th>
+                                    <th>Update</th>
+                                    <th>Delete</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="tableData">
+                            </tbody>
+
+                        </table>
+                        <!-- Button trigger modal -->
+
+
+                        <!-- Modal -->
+                        <div class="modal fade animate__zoomIn animate__animated" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content px-2 pt-3  pb-1">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            <span class="rounded-circle"></span>
+                                            <span class="rounded-circle"></span>
+                                            <span class="rounded-circle"></span>
+
+
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div id="modalBody" class="modal-body">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------modal delete button-->
+
+    </section>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
